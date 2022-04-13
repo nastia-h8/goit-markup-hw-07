@@ -1,0 +1,23 @@
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-fill);
+    transition: fill var(--animation-duration) var(--animation-timing-function),
+        background-color var(--animation-duration) var(--animation-timing-function);
+}
+
+.social-link:hover,
+.social-link:focus {
+    fill: var(--primary-background-color);
+    background-color: var(--accent-color);
+}

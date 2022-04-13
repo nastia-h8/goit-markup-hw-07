@@ -3,7 +3,10 @@
 
 @import './base/common';
 @import './base/container';
-@import './base/buttons';
+@import './components/buttons';
+
+@import './components/social-links';
+@import './components/backdrop';
 
 @import './layout/header';
 @import './layout/hero';
@@ -13,8 +16,3 @@
 @import './layout/clients';
 @import './layout/portfolio';
 @import './layout/footer';
-
-@import './layout/backdrop';
-
-
-

@@ -41,28 +41,6 @@
     opacity: 0;
 }
 
-.modal-close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-background-color);
-    cursor: pointer;
-    transition: fill var(--animation-duration) var(--animation-timing-function);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    fill: var(--accent-color)
-}
-
 .signup-form-field {
     display: block;
     margin-bottom: 10px;
