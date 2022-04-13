@@ -22,7 +22,7 @@
     background-color: #188ce8;
 }
 
-.modal-close-btn {
+.modal-btn--close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -39,9 +39,35 @@
     transition: fill var(--animation-duration) var(--animation-timing-function);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-btn--close:hover,
+.modal-btn--close:focus {
     fill: var(--accent-color);
+}
+
+.radio-btn {
+    padding: 6px 22px;
+    border-style: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    background-color: var(--tertiary-background-color);
+    cursor: pointer;
+
+    transition: color var(--animation-duration) var(--animation-timing-function),
+        background-color var(--animation-duration) var(--animation-timing-function),
+        box-shadow var(--animation-duration) var(--animation-timing-function);
+}
+
+.radio-btn:hover,
+.radio-btn:focus {
+    color: var(--tertiary-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .submit-btn {
@@ -70,3 +96,6 @@
 .submit-btn:focus {
     background-color: #188ce8;
 }
+
+
+

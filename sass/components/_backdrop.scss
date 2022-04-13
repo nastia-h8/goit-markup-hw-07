@@ -41,13 +41,13 @@
     opacity: 0;
 }
 
-.signup-form-field {
+.signup-form__field {
     display: block;
     margin-bottom: 10px;
 }
 
 
-.signup-form-title {
+.signup-form__title {
     display: block;
     margin-bottom: 12px;
     font-weight: 700;
@@ -58,7 +58,7 @@
     color: var(--primary-text-color);
 }
 
-.signup-form-text {
+.signup-form__text {
     display: block;
     text-align: left;
     margin-bottom: 4px;
@@ -68,13 +68,13 @@
     color: var(--secondary-text-color);
 }
 
-.signup-form-input-wrapper {
+.signup-form__wrapper {
     display: block;
     position: relative;
 }
 
 
-.signup-form-input {
+.signup-form__input {
     width: 100%;
     padding: 12px 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -92,11 +92,11 @@
     transition: fill var(--animation-duration) var(--animation-timing-function);
 }
 
-.signup-form-input:focus+.signup-icon {
+.signup-form__input:focus+.signup-icon {
     fill: var(--accent-color);
 }
 
-.signup-form-message {
+.signup-form__message {
     display: block;
     width: 100%;
     height: 120px;
@@ -109,20 +109,20 @@
     transition: border-color var(--animation-duration) var(--animation-timing-function);
 }
 
-.signup-form-input:focus,
-.signup-form-message:focus {
+.signup-form__input:focus,
+.signup-form__message:focus {
     border-color: var(--accent-color);
     outline: none;
 }
 
-.signup-form-message::placeholder {
+.signup-form__message::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
 
-.signup-checkbox-field {
+.checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,12 +133,12 @@
     color: var(--secondary-text-color);
 }
 
-.signup-checkbox-link {
+.checkbox__link {
     text-decoration-line: underline;
     color: var(--accent-color);
 }
 
-.checkbox-icon {
+.checkbox__icon {
     margin-right: 10px;
     cursor: pointer;
     background-color: transparent;
@@ -148,11 +148,11 @@
         background-color var(--animation-duration) var(--animation-timing-function);
 }
 
-.signup-checkbox-input:checked+.checkbox-icon {
+.checkbox__input:checked+.checkbox__icon {
     background-color: var(--accent-color);
     border: 0.2px solid #FFFFFF;
 }
 
-.signup-checkbox-input:focus+.checkbox-icon {
+.checkbox__input:focus+.checkbox__icon {
     border-color: var(--accent-color);
 }

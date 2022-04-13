@@ -1,14 +1,16 @@
-.advantages-items {
+.advantages__list {
     display: flex;
     margin-left: -30px;
+    margin-top: -30px;
 }
 
-.advantages-item {
+.advantages__item {
     flex-basis: calc((100% - 4 * 30px) / 4);
     margin-left: 30px;
+    margin-top: 30px;
 }
 
-.icon-box {
+.advantages__card-box {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
@@ -19,7 +21,7 @@
     border-radius: 4px;
 }
 
-.advantages-item-title {
+.advantages__title {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 14px;
@@ -28,7 +30,7 @@
     text-transform: uppercase;
 }
 
-.advantages-item-description {
+.advantages__description {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
