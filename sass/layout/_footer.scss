@@ -8,24 +8,15 @@
     align-items: baseline;
 }
 
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
 .footer-contacts__box {
     margin-right: 70px;
 }
 
-.footer-logo {
-    display: inline-block;
-    margin-bottom: 20px;
-    font-family: var(--secondary-font-family);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
-}
-
-.footer-logo--color {
-    color: var(--tertiary-text-color);
-}
 
 .footer-contacts__item:not(:last-child) {
     margin-bottom: 9px;
@@ -38,17 +29,16 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: color var(--animation-duration) var(--animation-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.footer-contacts__link--color{
+.footer-contacts__link_color{
     color: var(--tertiary-text-color);
 }
-
-.footer-contacts__link:hover,
-.footer-contacts__link:focus {
-    color: var(--accent-color);
-}
-
 
 .footer__text {
     display: block;
@@ -57,6 +47,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    
     text-transform: uppercase;
     color: var(--tertiary-text-color);
 }
@@ -66,8 +57,7 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-.footer__wrapper--left {
+.footer__wrapper_left {
     margin-left: auto;
 }
 
@@ -82,15 +72,11 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-}
-
-.contact-form__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6)
-}
-
-.submit-btn__icon{
-    margin-left: 10px;
+    
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6)
+    }
 }

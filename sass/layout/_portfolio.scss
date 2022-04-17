@@ -10,8 +10,8 @@
 
 
 .work-examples__list {
-    display: flex;
-    flex-wrap: wrap;
+    @extend %flex-wrap;
+
     margin-top: -30px;
     margin-left: -30px;
 }
@@ -25,12 +25,12 @@
 .work-examples__link {
     display: block;
     transition: box-shadow var(--animation-duration) var(--animation-timing-function);
-}
 
-.work-examples__link:hover,
-.work-examples__link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .work-examples__card {
@@ -76,9 +76,10 @@
     overflow: auto;
     transform: translateY(100%);
     transition: transform var(--animation-duration) var(--animation-timing-function);
+
+    .work-examples__link:hover &,
+    .work-examples__link:focus & {
+        transform: translateY(0%);
+    }
 }
 
-.work-examples__link:hover .overlay__text,
-.work-examples__link:focus .overlay__text {
-    transform: translateY(0%);
-}

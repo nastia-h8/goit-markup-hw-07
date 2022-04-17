@@ -10,10 +10,12 @@
     opacity: 1;
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+.backdrop {
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .modal {
@@ -36,9 +38,12 @@
         opacity var(--animation-duration) var(--animation-timing-function);
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
+
+.modal {
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
 .signup-form__field {
@@ -49,11 +54,10 @@
 
 .signup-form__title {
     display: block;
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
     text-align: center;
+    margin-bottom: 12px;
+
+    @include font(700, 20px, 23px);
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
@@ -62,8 +66,8 @@
     display: block;
     text-align: left;
     margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.17;
+
+    @include font(400, 12px, 14px);
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
 }
@@ -73,7 +77,6 @@
     position: relative;
 }
 
-
 .signup-form__input {
     width: 100%;
     padding: 12px 40px;
@@ -81,8 +84,11 @@
     border-radius: 4px;
     color: var(--primary-text-color);
     transition: border-color var(--animation-duration) var(--animation-timing-function);
+    &:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
 }
-
 
 .signup-icon {
     position: absolute;
@@ -90,10 +96,10 @@
     transform: translateY(-50%);
     left: 14px;
     transition: fill var(--animation-duration) var(--animation-timing-function);
-}
-
-.signup-form__input:focus+.signup-icon {
-    fill: var(--accent-color);
+    
+    .signup-form__input:focus + & {
+        fill: var(--accent-color);
+    }
 }
 
 .signup-form__message {
@@ -107,19 +113,16 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color var(--animation-duration) var(--animation-timing-function);
-}
-
-.signup-form__input:focus,
-.signup-form__message:focus {
-    border-color: var(--accent-color);
-    outline: none;
-}
-
-.signup-form__message::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+        &:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
+        &::placeholder {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
 }
 
 .checkbox {
@@ -127,8 +130,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.71;
+
+    @include font(400, 14px, 24px);
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
@@ -145,14 +148,14 @@
     border: 2px solid #000000;
     border-radius: 3px;
     transition: border-color var(--animation-duration) var(--animation-timing-function),
-        background-color var(--animation-duration) var(--animation-timing-function);
-}
+    background-color var(--animation-duration) var(--animation-timing-function);
 
-.checkbox__input:checked+.checkbox__icon {
-    background-color: var(--accent-color);
-    border: 0.2px solid #FFFFFF;
-}
-
-.checkbox__input:focus+.checkbox__icon {
-    border-color: var(--accent-color);
+    .checkbox__input:checked + & {
+        background-color: var(--accent-color);
+        border: 0.2px solid #FFFFFF;
+    }
+    
+    .checkbox__input:focus + & {
+        border-color: var(--accent-color);
+    }
 }
