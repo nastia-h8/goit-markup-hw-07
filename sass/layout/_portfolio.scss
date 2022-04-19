@@ -1,4 +1,4 @@
-.filter__list {
+.filter {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -9,7 +9,7 @@
 }
 
 
-.work-examples__list {
+.work-examples {
     @extend %flex-wrap;
 
     margin-top: -30px;
@@ -54,12 +54,12 @@
     color: var(--secondary-text-color);
 }
 
-.image__wrapper {
+.image-wrapper {
     position: relative;
     overflow: hidden;
 }
 
-.overlay__text {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;

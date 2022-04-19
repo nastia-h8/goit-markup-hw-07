@@ -17,16 +17,13 @@ p {
 
 ul,
 ol {
+    list-style: none;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
 }
 
-.list {
-    list-style: none;
-}
-
-.link {
+a {
     text-decoration: none;
 }
 
@@ -35,17 +32,3 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.section__title {
-    margin-bottom: 50px;
-    text-align: center;
-
-    @include font(700, 36px, 42px);
-    letter-spacing: 0.03em;
-}
-

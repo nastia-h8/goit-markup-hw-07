@@ -1,10 +1,10 @@
-.social-links__list {
+.socials {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.social-links__link {
+.socials__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,6 @@
     }
 }
 
-.social-links_right:not(:last-child) {
+.socials_right:not(:last-child) {
     margin-right: 10px;
 }

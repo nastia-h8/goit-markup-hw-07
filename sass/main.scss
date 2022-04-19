@@ -5,10 +5,12 @@
 
 @import './base/common';
 @import './base/container';
+@import './base/section';
+
 @import './components/buttons';
 @import './components/logo';
-
-@import './components/social-links';
+@import './components/contacts';
+@import './components/socials';
 @import './components/backdrop';
 
 @import './layout/header';
